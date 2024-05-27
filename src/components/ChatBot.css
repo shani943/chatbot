@@ -1,0 +1,34 @@
+/* src/components/ChatBot.css */
+.chatbot-container {
+  display: flex;
+  height: 100vh;
+}
+
+.chat-history {
+  overflow-y: auto;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.sidebar-open {
+  margin-left: 2px; /* Shift when sidebar is open */
+}
+
+.header {
+  background-color: #333;
+  color: rgba(10, 14, 0, 0.834);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chat-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}

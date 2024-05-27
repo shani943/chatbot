@@ -1,0 +1,14 @@
+/* src/components/NewChat.css */
+.new-chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.new-chat .chat-window {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  overflow-y: auto;
+}

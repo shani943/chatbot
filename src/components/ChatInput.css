@@ -1,0 +1,27 @@
+/* src/components/ChatInput.css */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  position: relative;
+}
+
+.chat-input button {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.chat-input h2 {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}

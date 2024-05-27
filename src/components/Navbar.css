@@ -1,0 +1,11 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.profile-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
