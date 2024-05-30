@@ -2,6 +2,9 @@
 .chatbot-container {
   display: flex;
   height: 100vh;
+  background-color: rgb(1, 0, 0);
+  color: chartreuse;
+
 }
 
 .chat-history {
@@ -20,8 +23,8 @@
 }
 
 .header {
-  background-color: #333;
-  color: rgba(10, 14, 0, 0.834);
+  background-color: #0c0101;
+  color: rgba(24, 209, 95, 0.834);
   padding: 1rem;
   display: flex;
   justify-content: flex-end;
@@ -31,4 +34,10 @@
   flex: 1;
   overflow-y: auto;
   padding: 20px;
+}
+.chat-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
 }

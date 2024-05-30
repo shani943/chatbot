@@ -1,26 +1,25 @@
 /* src/components/DropdownMenu.css */
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 4px 4px;
-    z-index: 1;
-  }
-  
-  .dropdown-menu button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  .dropdown-menu button:hover {
-    background-color: #f7f7f7;
-  }
-  
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 1;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f7f7f7;
+}

@@ -1,20 +1,26 @@
-// src/components/ChatInput.js
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperclip, faPaperPlane, faMicrophone, faImage } from '@fortawesome/free-solid-svg-icons';
 import './ChatInput.css';
 
 const ChatInput = () => {
   const [message, setMessage] = useState('');
+  const [isRecording, setIsRecording] = useState(false);
 
   const handleSend = () => {
-    // Handle sending message
+    if (message.trim()) {
+      console.log("Message sent:", message);
+      setMessage('');
+    }
+  };
+
+  const handleAudioToText = () => {
+    setIsRecording(!isRecording);
+    console.log(isRecording ? "Stopped recording" : "Started recording");
   };
 
   const handleAttachment = () => {
     // Handle adding attachment
-  };
-
-  const handleAudioToText = () => {
-    // Handle audio to text conversion
   };
 
   const handlePictureUpload = () => {
@@ -23,16 +29,24 @@ const ChatInput = () => {
 
   return (
     <div className="chat-input">
-      <button onClick={handleAttachment} title="Attachment">&#128206;</button>
-      <button onClick={handleAudioToText} title="Audio to Text">&#128247;</button>
-      <button onClick={handlePictureUpload} title="Upload Picture">&#128443;</button>
+      <button onClick={handleAttachment} title="Attachment">
+        <FontAwesomeIcon icon={faPaperclip} />
+      </button>
+      <button onClick={handlePictureUpload} title="Upload Picture">
+        <FontAwesomeIcon icon={faImage} />
+      </button>
       <input
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Type a message"
       />
-      <button onClick={handleSend}>Send</button>
+      <button onClick={handleSend} title="Send" className="send-button">
+        <FontAwesomeIcon icon={faPaperPlane} />
+      </button>
+      <button onClick={handleAudioToText} title="Audio to Text" className="mic-button">
+        <FontAwesomeIcon icon={faMicrophone} />
+      </button>
     </div>
   );
 };

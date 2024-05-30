@@ -1,27 +1,36 @@
 /* src/components/ChatInput.css */
 .chat-input {
   display: flex;
+  align-items: center;
   padding: 10px;
-  border-top: 1px solid #ddd;
-  position: relative;
+  background-color: rgb(225, 35, 35);
+  border-top: 1px solid #000000;
+  border-radius: 2cqmax;
 }
 
 .chat-input button {
-  margin-right: 10px;
-  font-size: 16px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
 }
+
+.chat-input .send-button {
+  margin-left: 10px;
+}
+
+.chat-input .mic-button {
+  margin-left: auto; /* Move the mic button to the right end */
+}
+
 
 .chat-input input {
   flex: 1;
+  background-color: rgb(5, 1, 10);
+  color: aqua;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #c71c1c;
   border-radius: 4px;
-  margin-right: 10px;
 }
 
-.chat-input h2 {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-}

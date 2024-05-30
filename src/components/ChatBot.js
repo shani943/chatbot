@@ -20,6 +20,7 @@ const ChatBot = () => {
           <Navbar />
         </header>
         <div className="chat-area">
+        <div className="chat-content"/>
           <NewChat />
         </div>
       </div>
