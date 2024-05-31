@@ -70,3 +70,49 @@
 .chat-history-list li:hover {
   background-color: #064e18;
 }
+.chat-history-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chat-history-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-history-list li:last-child {
+  border-bottom: none;
+}
+
+.chat-history-list li .selected {
+  font-weight: bold;
+}
+.chat-history-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chat-history-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-history-list li:last-child {
+  border-bottom: none;
+}
+
+.chat-history-list li .selected {
+  font-weight: bold;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

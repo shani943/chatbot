@@ -3,12 +3,12 @@ import React from 'react';
 import './Navbar.css';
 import Profile from './Profile';
 
-const Navbar = () => {
+const Navbar = ({ createNewChat }) => {
   return (
     <nav className="navbar">
       <ul className="navbar-menu">
         <li>About Us</li>
-        <li>Create New Chat</li>
+        <li onClick={createNewChat}>Create New Chat</li>
         <li><Profile /></li>
       </ul>
     </nav>

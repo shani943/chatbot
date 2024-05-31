@@ -3,14 +3,15 @@ import React from 'react';
 import ChatInput from './ChatInput';
 import './NewChat.css';
 
-const NewChat = () => {
+const NewChat = ({ addMessage, messages }) => {
   return (
     <div className="new-chat">
       <div className="chat-window">
-        {/* Chat messages will appear here */}
-        <p>Chat messages go here...</p>
+        {messages.map(message => (
+          <p key={message.id}>{message.text}</p>
+        ))}
       </div>
-      <ChatInput />
+      <ChatInput addMessage={addMessage} />
     </div>
   );
 };
