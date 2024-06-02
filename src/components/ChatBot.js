@@ -23,13 +23,16 @@ const ChatBot = () => {
     const currentConversation = updatedConversations[currentConversationIndex];
 
     if (currentConversation.messages.length === 0) {
-      currentConversation.title = message;
+      currentConversation.title = message.length > 10 ? message.substring(0, 10) + '...' : message;
     }
 
     currentConversation.messages.push(newMessage);
-    setConversations([currentConversation, ...updatedConversations.slice(0, currentConversationIndex), ...updatedConversations.slice(currentConversationIndex + 1)]);
-
-    console.log(JSON.stringify({ conversations: updatedConversations }));
+    const newConversations = [
+      currentConversation,
+      ...updatedConversations.filter((_, index) => index !== currentConversationIndex),
+    ];
+    setConversations(newConversations);
+    setCurrentConversationIndex(0);  // Keep the current conversation in view
   };
 
   const createNewChat = useCallback(() => {

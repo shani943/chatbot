@@ -1,14 +1,19 @@
-/* src/components/NewChat.css */
 .new-chat {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.new-chat .chat-window {
+.chat-display {
   flex: 1;
+  overflow-y: auto;
   padding: 20px;
   border: 1px solid #ddd;
   margin-bottom: 10px;
-  overflow-y: auto;
+  max-height: calc(100vh - 150px); /* Adjust the height as needed */
+}
+
+.message {
+  margin-bottom: 10px;
+  text-align: left; /* Align messages to the left */
 }

@@ -1,10 +1,9 @@
 .chat-input {
   display: flex;
   align-items: center;
-  padding: 10px;
   background-color: rgb(225, 35, 35);
   border-top: 1px solid #000000;
-  border-radius: 2cqmax;
+  width: 100%; /* Make the input area span the full width */
 }
 
 .chat-input button {
@@ -20,7 +19,7 @@
 }
 
 .chat-input .mic-button {
-  margin-left: auto; /* Move the mic button to the right end */
+  margin-left: 10px;
 }
 
 .chat-input textarea {
@@ -30,6 +29,13 @@
   padding: 10px;
   border: 1px solid #c71c1c;
   border-radius: 4px;
-  resize: none;
-  height: 50px; /* Adjust as needed */
+  font-size: 16px; /* Increase font size for better visibility */
+  resize: none; /* Prevent resizing */
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 40px; /* Minimum height for better appearance */
+}
+
+.chat-input button:last-child {
+  margin-left: 10px; /* Ensure the last button is spaced properly */
 }

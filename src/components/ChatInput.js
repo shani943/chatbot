@@ -14,6 +14,21 @@ const ChatInput = ({ addMessage }) => {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && e.shiftKey) {
+      // Prevent default behavior and allow Shift + Enter to add a new line
+      e.preventDefault();
+      setMessage((prev) => prev + '\n');
+    }
+  };
+
   const handleAudioToText = () => {
     setIsRecording(!isRecording);
     console.log(isRecording ? "Stopped recording" : "Started recording");
@@ -25,15 +40,6 @@ const ChatInput = ({ addMessage }) => {
 
   const handlePictureUpload = () => {
     // Handle picture upload
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSend();
-    } else if (e.key === 'Enter' && e.shiftKey) {
-      setMessage(message + '\n');
-    }
   };
 
   return (
@@ -49,6 +55,8 @@ const ChatInput = ({ addMessage }) => {
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Type a message"
         onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyDown}
+        rows="1"
       />
       <button onClick={handleSend} title="Send" className="send-button">
         <FontAwesomeIcon icon={faPaperPlane} />
