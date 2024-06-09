@@ -41,3 +41,16 @@
   flex-direction: column;
   ;
 }
+/* ChatBot.css */
+/* Define styles for dark mode */
+.dark-mode .chatbot-container {
+  background-color: #e0b9b9; /* Change background color in dark mode */
+  color :black
+}
+
+.dark-mode .main-content .header{
+  background-color: #e0b9b9; /* Change main content background color in dark mode */
+  color: rgb(14, 10, 10);
+}
+
+/* Add more styles for dark mode as needed */

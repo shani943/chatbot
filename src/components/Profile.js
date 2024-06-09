@@ -1,4 +1,4 @@
-// src/components/Profile.js
+// Profile.js
 import React, { useState } from 'react';
 import DropdownMenu from './DropdownMenu';
 import './Profile.css';
@@ -10,23 +10,13 @@ const Profile = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleLogin = () => {
-    // Handle login action
-    console.log("Logging in...");
-  };
-
-  const handleSignup = () => {
-    // Handle signup action
-    console.log("Signing up...");
-  };
-
   return (
     <div className="profile">
       <div className="profile-icon" onClick={toggleDropdown}>
         👤
       </div>
       {isDropdownOpen && (
-        <DropdownMenu handleLogin={handleLogin} handleSignup={handleSignup} />
+        <DropdownMenu />
       )}
     </div>
   );

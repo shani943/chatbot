@@ -3,10 +3,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  color: #dcd4d4;
+  /* color: #dcd4d4; */
   align-items: flex-start;
   transition: width 0.3s ease;
-  background-color: #000000;
+  /* background-color: #000000; */
   border-right: 1px solid #ddd;
   overflow-y: auto;
 }
@@ -31,7 +31,7 @@
 .line {
   width: 30px;
   height: 3px;
-  background-color: #e01f1f;
+  background-color: rgba(24, 209, 95, 0.834);
   margin: 4px 0;
 }
 
@@ -115,3 +115,13 @@
   border: none;
   cursor: pointer;
 }
+.dark-mode .chat-history-list {
+  background-color: #af1616; /* Change background color in dark mode */
+}
+
+.dark-mode .chat-history-list .chat-history{
+  background-color: #621212a8; /* Change main content background color in dark mode */
+  color: rgb(128, 12, 12);
+}
+
+/* Add more styles for dark mode as needed */
